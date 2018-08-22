@@ -1,0 +1,151 @@
+<!--<div id="rb">
+  <div class="row">
+      <div class="column ">
+        
+        <div id="disss">
+  
+            <div class="container">
+              <div class="jumbotron">
+                
+                <p><b> {{x}}</b></p> 
+               
+                <ul>
+                <li *ngFor="let fd of y">{{fd}}
+                  </ul>
+              </div>
+             
+            </div>
+            
+            <div class="container">
+              <div class="jumbotron">
+                
+                <p><b> {{x1}}</b></p> 
+                <p>{{y1}}</p>
+              </div>
+             
+            </div>
+            <div class="container">
+              <div class="jumbotron">
+                
+                <p><b> {{x2}}</b></p> 
+                <p>{{y2}}</p>
+              </div>
+             
+            </div>
+            <div class="container">
+              <div class="jumbotron">
+                
+                <p><b> {{x3}}</b></p> 
+                <p>{{y3}}</p>
+              </div>
+             
+            </div>
+            
+            <button routerLink="app-orders" class="btn">Order Now</button>
+            
+           
+            </div>
+      </div>
+      <div class="column" >
+        
+        <img src="./assets/images/try3.png" style="width:90%; height:100% ;">
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>-->
+
+<div id="rb" align="center">
+  
+      <div id="disss">
+
+        <div class="container">
+          <div class="jumbotron">
+
+            <p>
+              <b> {{x}}</b>
+            </p>
+
+            <ul>
+              <li *ngFor="let fd of y">{{fd}}</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="container">
+          <div class="jumbotron">
+
+            <p>
+              <b> {{x1}}</b>
+            </p>
+            <ul>
+              <li *ngFor="let fd of y1">{{fd}}</li>
+            </ul>
+
+          </div>
+
+        </div>
+        <div class="container">
+          <div class="jumbotron">
+
+            <p>
+              <b> {{x2}}</b>
+            </p>
+            <!-- <p>{{y2}}</p> -->
+            <ul>
+              <li *ngFor="let fd of y2">{{fd}}</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="container">
+          <div class="jumbotron">
+
+            <p>
+              <b> {{x3}}</b>
+            </p>
+            <!-- <p>{{y3}}</p> -->
+            <ul>
+              <li *ngFor="let fd of y3">{{fd}}</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="container">
+            <div class="jumbotron">
+  
+              <p>
+                <b> {{x4}}</b>
+              </p>
+              <!-- <p>{{y3}}</p> -->
+              <ul>
+                <li *ngFor="let fd of y4">{{fd}}</li>
+              </ul>
+            </div>
+  
+          </div>
+          <div class="container">
+              <div class="jumbotron">
+    
+                <p>
+                  <b> {{x5}}</b>
+                </p>
+                <!-- <p>{{y3}}</p> -->
+                <ul>
+                  <li *ngFor="let fd of y5">{{fd}}</li>
+                </ul>
+              </div>
+    
+            </div>
+        <table align="center">
+          <tr>
+          <td colspan=2>
+        <button class="btn" routerLink="app-orders" class="btn">Order Now</button>
+        </td>
+      </tr>
+      </table>
+      </div>
+    </div>
+    
+ 
+<router-outlet></router-outlet>

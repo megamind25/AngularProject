@@ -1,0 +1,76 @@
+
+<div id="fb" >
+
+    <table class="table">
+        <thead class="white-text">
+          <tr>
+            <th colspan="2"> Please provide your valuable feedback </th>
+          </tr>
+        </thead>
+        <tr>
+          <td><label> Customer Name</label> </td>
+          <td><input type="text" class="form-control" name="fedbk" [(ngModel)]="feedback.customer_name" id="fedbk" placeholder="Enter customer name..." required #fedbk="ngModel"></td>
+        </tr>
+       <!-- <tr>
+            <td><label>Rating</label> </td>
+            <td><input type="number" name="rating" [(ngModel)]="feedback.rating" placeholder="Enter rating..."  required></td>
+        </tr>-->
+        <tr>
+            <td><label> Rating</label></td>
+            <td> 
+              <select [(ngModel)]="feedback.rating" class="form-control" id="fbk"placeholder="Enter rating..." required >
+              <option>5 :Excellent</option>
+              <option>4 : Good</option>
+              <option>3 : Average</option>
+              <option>2 :Poor</option>
+              <option>1 :Below Average</option>
+              </select>
+            </td>
+          </tr>
+        <tr>
+            <td><label>Review</label></td>
+            <td><input type="text" name="review" id="review" class="form-control" [(ngModel)]="feedback.review" placeholder="Enter review..." required #review="ngModel"></td>
+        </tr>
+        <tr> 
+        
+          <td colspan="1"><input type="button" class="btn" value="Add Feedback" (click)=addFeedback(feedback)></td>
+          <td colspan="1"><input type="button" class="btn" value="No, Thanks" (click)=nothanks() ></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <!-- <ul>
+              <li *ngFor="let fd of feed">df: {{ fd._id }} {{fd.review}}</li>
+            </ul> -->
+          </td>
+        </tr>
+      </table>
+
+
+<!--<input type="text" [(ngModel)]="feedback.customer_name" placeholder="Enter customer name..."><br/>
+  <input type="number" name="rating" [(ngModel)]="feedback.rating" placeholder="Enter rating..." required><br/>
+  <input type="text" name="review" [(ngModel)]="feedback.review" placeholder="Enter review..." required><br/>
+
+  <input type="button" value="Add Feedback" (click)=addFeedback(feedback)>
+  <ul>
+    <li *ngFor="let fd of feed">df: {{ fd._id }} {{fd.review}}</li>
+  </ul>-->
+</div>
+
+<!--blaa blaaa-->
+<div *ngIf="fedbk.invalid && (fedbk.dirty || fedbk.touched)"
+class="alert alert-danger">
+
+<div *ngIf="fedbk.errors.required">
+Feedback field is empty.
+</div>
+</div>
+
+<div *ngIf="review.invalid && (review.dirty || review.touched)"
+class="alert alert-danger">
+
+<div *ngIf="review.errors.required">
+Review field is empty.
+</div>
+
+</div>

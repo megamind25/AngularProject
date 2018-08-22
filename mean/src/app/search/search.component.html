@@ -1,0 +1,30 @@
+<!-- <input type="text" [(ngModel)]="item1.item_name" placeholder="Enter username..." ><br/> -->
+  
+  <!-- <input type="text" name="review" [(ngModel)]="item.password" placeholder="Enter pasword..." required><br/> -->
+<!-- 
+  <input type="button" value="Search" (click)=getResults(item1)> -->
+<!-- <ul>
+    <li *ngFor="let fd of search">df: {{ fd.item_name}} from{{fd.restaurant_name}} for {{fd.price}}</li>
+  </ul>   -->
+
+  <!--Jumbotron-->
+<div class="jumbotron text-center" id="sea">
+
+    <!--Title-->
+    <h1 class="card-title h2-responsive mt-2"><strong>Search Results</strong></h1>
+    <!--Subtitle-->
+  
+    <!--Text-->
+    <div class="d-flex justify-content-center container-fluid">
+  
+        <ul>
+            <strong><li *ngFor="let fd of search">Item: {{ fd.item_name}} &nbsp;&nbsp; &nbsp; &nbsp;    Restaurant: {{fd.restaurant_name}} &nbsp;&nbsp;&nbsp;&nbsp;     Price: ₹{{fd.price}}</li></strong>
+          </ul> 
+        
+    </div>
+    
+    
+    <hr class="my-4">
+  
+  
+  </div>

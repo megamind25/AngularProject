@@ -1,0 +1,93 @@
+
+<!--Navbar-->
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="nav1">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">QuickQ</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse d-flex justify-content-end navbar-collapse " id="basicExampleNav">
+    <div class=" d-flex justify-content-end  ">
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="app-disp" ><button class="btn btn btn-outline-light text-dark">View Menu</button>
+              <span class="sr-only">(current)</span>
+            </a>
+        </li>
+          <li class="nav-item">
+                <a class="nav-link" routerLink="app-register" ><button class="btn btn-outline-light text-dark waves-effect">Admin Signup</button></a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link"  routerLink="app-login" ><button class="btn btn-outline-light text-dark waves-effect">Admin Login</button></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link"  routerLink="app-aboutus"><button class="btn btn-outline-light text-dark waves-effect">About Us</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="app-contact" ><button class="btn btn-outline-light text-dark waves-effect">Contact</button></a>
+        </li>
+       
+        <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="app-menuitems" >Insert Menu</a>
+        </li> -->
+       <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="app-search" >search</a>
+          </li> -->
+          <!-- <span class="sr-only">(current)</span> -->
+         
+        <!--<li class="nav-item">
+           
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </li>
+         <li class="nav-item">
+               <a class="nav-link"> <button class="btn btn-outline-primary waves-effect" type="submit" (click)="searchResults(item1)">
+                    Search</button></a>
+           
+      </li>-->
+
+      <li class="nav-item">
+        <input id="searchbar"class="form-control mr-sm-1 waves-effect" [(ngModel)]="item1.item_name"type="text" placeholder="Type here" aria-label="Search">
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" ><input type="button" value="Search" class="btn btn-outline-light text-dark waves-effect" (click)=searchResults(item1)></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"  ><button class="btn btn-outline-light text-dark waves-effect" (click)=lg()>Log Out</button></a>
+</li>
+
+
+      <!-- Dropdown -->
+      <!-- (click)=getResults(item1) -->
+
+          <!-- Dropdown -->
+          
+
+      </ul>
+  
+      <!-- Links -->
+    </div>
+      
+  </div>
+</nav>
+    
+  
+  
+
+
+
+<!--/.Navbar-->
+<div class="hello" id="quote1">
+<p><b><i><strong>If you're not at the table,<br/> you're on the menu</strong></i></b></p>
+</div>
+<!-- <ul>
+  <li *ngFor="let fd of search">df: {{ fd.item_name}} from{{fd.restaurant_name}} for {{fd.price}}</li>
+</ul> -->
+<router-outlet></router-outlet>

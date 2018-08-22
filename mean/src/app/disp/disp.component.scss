@@ -1,0 +1,65 @@
+// .jumbotron
+// {
+//     padding: 1rem 1rem;
+//     width: 48%;
+// }
+// .column {
+//     float: left;
+//     width: 48%;
+//     padding: 10px;
+//     height: auto;
+//     /* Should be removed. Only for demonstration */
+// }
+
+// /* Clear floats after the columns */
+// .row:after {
+//     content: "";
+//     display: table;
+//     clear: both;
+// }
+// .btn{
+//     background-color: #FF5722;
+   
+// }  
+
+.jumbotron
+{
+    padding: 1rem 1rem;
+    width: 48%;
+}
+.column {
+    float: left;
+    width: 48%;
+    padding: 10px;
+    height: auto;
+    /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.btn{
+    background-color: #FF5722;
+    left:50%;
+    
+   
+}  
+
+td{
+    color:black;   
+   
+    border: none;
+
+}
+.table{
+    border-radius: 6px;
+    text-align: center;
+    border-collapse: collapse;
+    
+}
+ul{
+    list-style-type:none;
+}

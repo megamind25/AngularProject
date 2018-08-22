@@ -1,0 +1,51 @@
+<div id="loggg">
+  <!-- <input type="text" [(ngModel)]="owner.username"  class="fortextbox"  placeholder="Enter username..." ><br/>
+  
+  <input type="text" name="review"  class="fortextbox" [(ngModel)]="owner.password" placeholder="Enter pasword..." required><br/>
+
+  <input type="button" value="Login"  class="forsubmit" (click)=login(owner)>
+
+ 
+ <ul>
+  <li *ngFor="let user of current_restaurant">{{ user._id }}    {{user.name}}  </li>
+</ul> -->
+<!-- <b>{{feedback_flag}}</b> -->
+
+<table class="table">
+    <thead class="white-text">
+      <tr>
+        <th colspan="2">Login</th>
+      </tr>
+    </thead>
+    <tr>
+        <td><label>Username</label> </td>
+        <td><input type="text" class="form-control" name="username" id="username"[(ngModel)]="owner.username" placeholder="Enter username..." required #username="ngModel"></td>
+    </tr>
+    <tr>
+        <td><label>Password</label></td>
+        <td><input type="password" class="form-control"name="password" id="password" [(ngModel)]="owner.password" placeholder="Enter password..." required #password="ngModel"></td>
+    </tr>
+    <tr> 
+      <td colspan="2"><a ><input type="button" class="btn" value="Login" (click)=login(owner)></a></td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="username.invalid && (username.dirty || username.touched)"
+class="alert alert-danger">
+
+<div *ngIf="username.errors.required">
+Username is required.
+</div>
+
+</div>
+
+<div *ngIf="password.invalid && (password.dirty || password.touched)"
+class="alert alert-danger">
+
+<div *ngIf="password.errors.required">
+Password is required.
+</div>
+
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,159 @@
+<!-- <p>
+  orders works!
+</p>
+
+<div>
+  <select class="select-rest" required [(ngModel)]="restSelected" (ngModelChange)='onRestSelected(restSelected)' placeholder="Select the restaurant">
+    <option >Select the restaurant</option>
+    <option class="restaurant" *ngFor="let rest of restName" [value]="rest" [(ngModel)]="selectedRestName">{{rest}}
+    </option>
+  </select>
+
+</div>-->
+
+
+
+<!--main file
+
+<div style="display: inline-block" id="ord">--main file---
+<!-- <select class="select-option" required [(ngModel)]="optionSelected" (ngModelChange)='onOptionSelected($event)' placeholder="Select your item"> 
+  <option>Select your item</option>
+  <option class="option" *ngFor="let opt of menuItems" [value]="opt" [(ngModel)]="orders.itemName">{{opt.item_name}} </option>
+</select>
+<br><br> -->
+<!--main file--
+<table class="table">
+    <thead class="white-text">
+      <tr>
+        <th colspan="2">Choose your Order ! </th>
+      </tr>
+    </thead>
+    <tr>
+      <td><label align="right">Restaurant</label> </td>
+      <td>
+          <select class="form-control" [(ngModel)]="orders.restaurantName" (change)=getItems(orders.restaurantName)>
+              <option disabled>Select the restaurant</option>
+                <option class="restaurant" *ngFor="let rest of restName" [value]="rest" ngDefaultControl >{{rest}}
+                </option>
+            </select>
+      </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label align="right"> Item</label> </td>
+        <td>
+            <select class="form-control"[(ngModel)]="orders.itemName" (change)=price()>
+                <option disabled>Select your item</option>
+                <option class="option" *ngFor="let opt of menuItems" [value]="opt.item_name"    ngDefaultControl>{{opt.item_name}}
+                </option>
+              
+            </select>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+              
+<label align="right">Quantity</label> </td>
+          <td>
+              
+<input class="form-control" name="quantityInput" [(ngModel)]="orders.quantity" >
+          </td>
+        </tr>
+        <tr>
+            <td>
+                
+ 
+<label align="right">Total Amount : {{total}}</label>
+            <td>
+                
+  <input class="form-control" name="quantityInput" [(ngModel)]="orders.quantity" >
+            </td>
+          </tr>
+
+          <tr> 
+        
+              <td colspan="2"><input type="button" class="btn" routerLink="app-feedback" value = "Submit Order" (click)=orderItem(orders)></td>
+            </tr>
+            </table>
+
+
+
+
+
+
+
+
+</div>
+<router-outlet></router-outlet>0--- main file-->
+<div id="ord">
+
+<div>
+    <table class="table">
+        <thead class="white-text">
+            <tr>
+              <th colspan="2">Choose your Order ! </th>
+            </tr>
+          </thead>
+          <tr>
+            <td><label align="right">Restaurant</label> </td>
+            <td>
+  <select class="form-control" required [(ngModel)]="restSelected" (ngModelChange)='onRestSelected($event)' placeholder="Select the restaurant">
+    <option>Select the restaurant</option>
+    <option class="restOption" *ngFor="let rest of restName" [value]="rest">{{rest}}
+    </option>
+  </select>
+  </td>
+<!-- </div>
+
+  
+
+
+
+
+<div style="display: inline-block"> -->
+</tr>
+<tr>
+    <td>
+        <label align="right"> Item</label> </td>
+    <td>
+<select class="form-control" required [(ngModel)]="optionSelected" (ngModelChange)='onItemSelected($event)' placeholder="Select your item"> 
+  <option>Select your item</option>
+  <option class="option" *ngFor="let opt of menuItems" [ngValue]="opt.item_name">{{opt.item_name}} </option>
+</select>
+</td>
+</tr>
+<tr>
+    <td>
+        
+<label align="right">Quantity</label> </td>
+    <td><input name="quantityInput" class="form-control" [(ngModel)]="orders.quantity" >
+
+</td>
+</tr>
+<tr>
+   
+        
+
+<!-- <label align="right">Total Amount : {{total}}</label> -->
+    <td>
+<label>Total</label>
+    </td>
+    <td><input type="text" class="form-control" value= "{{orders.quantity * total}}"></td>
+    <tr>
+    <td colspan=2>
+
+<input type="button" class="btn" value = "Submit Order" (click)=orderItem(orders)>
+</td>
+</tr>
+</table>
+</div>
+
+
+
+
+</div>
+
+
+

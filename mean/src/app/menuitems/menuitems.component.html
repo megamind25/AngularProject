@@ -1,0 +1,76 @@
+
+<!-- <ul>
+  <li *ngFor="let user of users">{{ user._id }}    {{user.item_name}}</li>
+</ul> -->
+
+<!-- <form method="post" action="/additem"> -->
+  <!-- <label>enter the details</label><br> 
+
+  <input type="text" [(ngModel)]="restaurant.item_name" placeholder="Enter item name..."><br/>
+  <input type="number" name="price" [(ngModel)]="restaurant.price" placeholder="Enter price..." required><br/>
+  <input type="text" name="cuisine" [(ngModel)]="restaurant.cuisine" placeholder="Enter cuisine..." required><br/>
+  <input type="text" name="offers"  [(ngModel)]="restaurant.offers" placeholder="Enter offers..." required><br/>
+  <input type="text" name="tags" [(ngModel)]="restaurant.tags" placeholder="Enter tags..." ><br/>
+
+  {{restaurant.item_name}}
+  {{restaurant.price}}
+  {{restaurant.cuisine}}
+  {{restaurant.offers}}
+  {{restaurant.restaurant_name}}
+  <input type="button" value="Add item" (click)=add(restaurant)>
+  <input type="button" value="update item" (click)=update(restaurant)>
+  <b>{{restaurant_flag}}</b>-->
+<div id="mi">
+  <table class="table">
+      <thead class="white-text">
+        <tr>
+          <th colspan="2">Enter Menu Items</th>
+        </tr>
+      </thead>
+      <tr>
+        <td><label>Item Name</label> </td>
+        <td><input type="text" class="form-control"[(ngModel)]="restaurant.item_name" placeholder="Enter item name..."></td>
+      </tr>
+      <tr>
+          <td><label>Price</label> </td>
+          <td><input type="number"  class="form-control"name="price" [(ngModel)]="restaurant.price" placeholder="Enter price..." required></td>
+      </tr>
+      <tr>
+          <td><label>Cuisine</label></td>
+          <td><input type="text" class="form-control" name="cuisine" [(ngModel)]="restaurant.cuisine" placeholder="Enter cuisine..." required></td>
+      </tr>
+      <tr>
+          <td><label>Offers</label></td>
+          <td> <input type="text"  class="form-control"name="offers"  [(ngModel)]="restaurant.offers" placeholder="Enter offers..." required></td>
+      </tr>
+      <tr>
+          <td><label>Tags</label></td>
+          <td><input type="text"  class="form-control" name="tags" [(ngModel)]="restaurant.tags" placeholder="Enter tags..." ></td>
+      </tr>
+      <tr> 
+     
+        <td  align="center" colspan=2><input type="button" class="btn" value="Add item" (click)=add(restaurant)></td>
+  
+        <!-- <td><input type="button" class="btn" value="update item" (click)=update(restaurant)></td> -->
+      </tr>
+      <tr>
+        <td colspan="2">
+            <!-- {{restaurant.item_name}}
+            {{restaurant.price}}
+            {{restaurant.cuisine}}
+            {{restaurant.offers}}
+            {{restaurant.restaurant_name}}
+            {{restaurant_flag}} -->
+        </td>
+      </tr>
+    </table>
+
+<table class="table">
+    <tr><td><input type="button" class="btn" value="Show orders" (click)=showOrders()></td></tr>
+
+<tr><td><label class="form-control" *ngFor="let ord of ordersArray"> {{"Item: "+ord.itemName+" Quantity: "+ ord.quantity+" Amount: "+ ord.total}}</label>
+</td>
+</tr>
+</table>
+
+  </div>
